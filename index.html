@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>log-in</title>
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kablammo&family=Outfit:wght@200;500&family=Red+Hat+Display:wght@400;500;600;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Milonga&family=Unbounded:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- end-->
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <div class="main-container">
+    <div class="login-container">
+      <div class="image-container">
+        <img src="images/medium-shot-woman-posing-with-inspirational-words.jpg" style= "width: 100%; height: 100%;">
+      </div>
+      <div class="info-container">
+        <div>
+          <h1>Don't become a SLAVE to your thoughts, 
+            <!-- <img src="./images/brush-stroke-banner-4.svg"></img> -->
+            <span>CONTROL </span>them</h1>
+        </div>
+        <!-- <h2></h2> -->
+          <form>
+            <div class="details-grid">
+              <div>
+                First name
+                <br>
+                <input type="text" minlength="3" required>
+              </div>
+              <div>
+                Last name<br>
+                <input type="text" minlength="3">
+              </div>
+              <div>
+                Email<br>
+                <input type="email" required minlength="10" data-error="please provide a valid email address">
+              </div>
+              <div>
+                Phone number<br>
+                <input type="tel" required data-error="please enter a valid number" minlength="11">
+              </div>
+              <div>
+                Password<br>
+                <input type="password" required data-error="password do not match" min="8" pattern="[.a-zA-Z0-9]+[#$\^!\+\=\||A-Z]">
+              </div>
+              <div>
+                Confirm password<br>
+                <input type="password" required data-error="password do not match">
+              </div>
+            </div>
+            <button>Register</button>
+          </form>
+          <div><p>Already a member? <a href="#">login</a></p></div>
+        <!-- <div></div> -->
+      </div>
+    </div>
+  </div>
+</body>
+</html>

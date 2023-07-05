@@ -76,16 +76,17 @@ select {
 button {
   padding: .5em 1.5rem;
   margin: 1rem 0 0 3rem;
-  border-radius: .3rem;
-  border: .5px solid black;
-  color: black;
-  background-color: #FFD93D;
-  font-family: "Kablammo",Georgia, 'Times New Roman', Times, serif;
+  // border-radius: .3rem;
+  border: 1.9px ;
+  color: rgb(170, 170, 45);
+  background-color: transparent;
+  font-family: "oswald",Georgia, 'Times New Roman', Times, serif;
   cursor: pointer;
 }
 
 body .main-container {
   display: flex;
+  height: 100vh;
 }
 
 b {
@@ -96,13 +97,13 @@ b {
 h1 {
   margin-top: 1rem;
   text-align: center;
-  font-family: "Milonga";
+  font-family: "Oswald";
 }
 
 .login-container {
   width: 100%;
   display: flex;
-  height: 100%;
+  // height: inherit;
 }
 
 .image-container {
@@ -113,7 +114,8 @@ h1 {
 .image-container img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  // object-fit: fill;
+  // z-index: -1;
 }
 
 .info-container {
@@ -125,6 +127,7 @@ h1 {
   font-size: 1rem;
   color: #fff;
 }
+
 
 .info-container div {
   position: relative;
@@ -138,27 +141,30 @@ h1 {
   position: absolute;
   left: 25%;
   top: 25%;
-  // z-index: -1;
+  z-index: -1;
   transform: rotate(-10deg);
 }
+
 
 h1 span {
   font-size: 2.4rem;
 }
 
-form + div {
+.login {
   margin: 1rem 0 0 3rem;
   font-family: cursive;
 }
 
-form + div a {
+.login a {
   color: yellow;
   text-decoration: none;
   font-size: 1.2rem;
+  font-family: "comfortaa";
 }
 
-form + div a:hover {
-  background: linear-gradient(to right, #ffff00, #979726);
+
+form + br br div a:hover {
+  background-color: #c92432;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -197,12 +203,67 @@ form + div a:hover {
 }
 
 
-svg {
+.arrow {
   position: absolute;
   width: 30px;
   height: 10%;
+  left: 43%;
+  bottom: 19%;
+  color: #ffff00
 }
 
+
+
+svg {
+  position: absolute;
+  width: 50px;
+  height: 30px;
+  left: 60%;
+}
 button:hover {
-  background-color: #d6b42d;
+  color: #ffff00;
+}
+
+form div[data-error] input {
+  border: 1px solid #8d2424;
+  color: #8d2424;
+}
+
+form div[data-error]::after input {
+  content: attr(data-error);
+  display: block;
+  color: #c92432;
+  margin: 10px;
+}
+
+.star {
+  position: absolute;
+  // color: rgb(65, 230, 78);
+  color: black;
+  bottom: 2%;
+  left: 80%;
+  width: 150px;
+  height: 60%;
+  // opacity: 40%;
+  transform: rotate(30deg);
+  // z-index: 0;
+}
+
+// .star:hover {
+//   position: absolute;
+//   transform: rotate(190deg);
+//   bottom: -3%;
+//   left: 80%;
+//   width: 150px;
+//   height: 60%;
+// }
+
+div .circle {
+  position: absolute;
+  color: #ffff00;
+  width: 100px;
+  height: 60%;
+  z-index: 0;
+  left: 10%;
+  bottom: -50%;
 }

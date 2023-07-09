@@ -73,13 +73,14 @@ select {
   }
 }
 button {
-  padding: 0.5em 1.5rem;
+  padding: 0.5em clamp(0.5rem, 3vw, 1.5rem);
   margin: 1rem 0 0 3rem;
-  border: 1.9px;
+  border: clamp(1px, 3vw, 1.9px);
   color: rgb(170, 170, 45);
   background-color: transparent;
   font-family: "oswald", Georgia, "Times New Roman", Times, serif;
   cursor: pointer;
+  font-size: clamp(0.5rem, 3vw, 1.1rem);
 }
 
 body .main-container {
@@ -96,6 +97,7 @@ h1 {
   margin-top: 1rem;
   text-align: center;
   font-family: "Oswald";
+  font-size: clamp(1rem, 3vw, 7.5rem);
 }
 
 .login-container {
@@ -111,6 +113,8 @@ h1 {
 .image-container img {
   width: 100%;
   height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 .info-container {
@@ -138,19 +142,15 @@ h1 {
   transform: rotate(-10deg);
 }
 
-h1 span {
-  font-size: 2.4rem;
-}
-
 .login {
   margin: 1rem 0 0 3rem;
   font-family: cursive;
+  font-size: clamp(0.7rem, 3vw, 1rem);
 }
 
 .login a {
   color: yellow;
   text-decoration: none;
-  font-size: 1.2rem;
   font-family: "comfortaa";
 }
 
@@ -162,22 +162,22 @@ form + br br div a:hover {
 }
 
 .details-grid {
-  margin-top: 1rem;
+  margin-top: 5%;
   display: grid;
   background-color: rgba(43, 42, 42, 0.74);
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(1, 1fr);
   width: 100%;
   padding: 4rem 0 4rem;
-  gap: 1.5rem;
+  gap: clamp(0.4rem, 2vw, 1rem);
   border: 1px solid none;
   box-shadow: 0.1px 0.1rem 0.1rem #373738;
 }
 
 .details-grid div {
   font-family: "ubuntu";
-  font-size: 0.8rem;
-  margin-left: 3rem;
+  font-size: clamp(0.5rem, 3vw, 0.8rem);
+  margin-left: clamp(0.4rem, 3vw, 3rem);
 }
 
 .details-grid div input:focus {
@@ -232,8 +232,13 @@ svg {
   left: 60%;
 }
 
+button {
+  background-color: black;
+}
+
 button:hover {
-  color: #ffff00;
+  background-color: #ffff00;
+  color: black;
 }
 
 input.success {
